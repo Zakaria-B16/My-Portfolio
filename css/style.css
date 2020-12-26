@@ -23,7 +23,7 @@ body {
 }
 
 body.stop {
-  overflow: hidden;
+  overflow-y: hidden !important;
 }
 
 ::-webkit-scrollbar {
