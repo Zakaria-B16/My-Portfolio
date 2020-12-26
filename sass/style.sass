@@ -20,6 +20,19 @@ body
     --fourth-color: #2ec4b6 
     --fifth-color: #817f7f
     background-color: var(--main-color)
+
+    &.stop
+        overflow: hidden
+
+::-webkit-scrollbar
+    width: 20px !important
+    background-color: var(--second-color)
+
+::-webkit-scrollbar-thumb
+    border-radius: 30px !important
+    background-color: var(--third-color) !important
+    border: 3px solid var(--second-color)
+    
     
 button 
     cursor: none !important
@@ -299,7 +312,7 @@ svg
             animation: rotate-content 10s ease-in infinite
             margin-left: 1090px
 
-@keyframes fall
+//@keyframes fall
     0%
             top: -20%
 
@@ -364,7 +377,7 @@ svg
 
         a 
             position: relative
-            z-index: 5
+            z-index: 4
             color: var(--main-color)
             margin: 10px
             background-color: var(--second-color)
@@ -918,13 +931,15 @@ svg
                     min-height: 120px
 
     button
+        position: relative
+        z-index: 5
         padding: 10px 30px
         border: none
         border-radius: 50px
         color: var(--second-color)
         background-color: var(--third-color)
         transition: .5s
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
 
         &:hover
             background-color: #d47b06
@@ -999,7 +1014,7 @@ footer
 // Start Go Top Button
 .go-top 
     position: fixed
-    bottom: 25px
+    bottom: 30px
     right: 25px
     width: 50px
     height: 50px
@@ -1008,19 +1023,21 @@ footer
     justify-content: center
     align-items: center
     border-radius: 50%
-    color: var(--main-color) !important
+    color: var(--main-color) 
     z-index: 100
     transition: .5s
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
 
     &:hover
-        background-color: var(--second-color)
+        background-color: darken(#ff9f1c, 25)
+        color: var(--second-color)
+        text-decoration: none
         
 // Start HIre Me Button
 
 .hire-me 
     position: fixed
-    top: 85px
+    bottom: 30px
     left: 25px
     padding: 5px 20px
     height: 50px
@@ -1029,7 +1046,7 @@ footer
     justify-content: center
     align-items: center
     border-radius: 25px
-    color: var(--main-color) !important
+    color: var(--main-color) 
     z-index: 100
     font-weight: bold
     transition: .5s
@@ -1037,7 +1054,9 @@ footer
     animation: wipe 4s ease-in-out infinite 
 
     &:hover
-        background-color: var(--second-color)
+        background-color: darken(#ff9f1c, 25)
+        color: var(--second-color)
+        text-decoration: none
 
 
 @keyframes wipe
@@ -1074,7 +1093,7 @@ footer
     display: flex
     justify-content: center
     align-items: center
-    overflow: hidden
+    overflow-y: hidden !important
     filter: blur(10px) contrast(15)
     //animation: rot 20s linear infinite
 

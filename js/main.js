@@ -78,6 +78,7 @@ panels.forEach((panel) => {
   });
 });
 
-window.addEventListener('load',()=>{
-document.querySelector("#loader").classList.add("remove")
-})
+window.addEventListener("load", () => {
+  document.querySelector("#loader").classList.add("remove");
+  document.body.classList.remove("stop");
+});

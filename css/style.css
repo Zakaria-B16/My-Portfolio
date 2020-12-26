@@ -22,6 +22,21 @@ body {
   background-color: var(--main-color);
 }
 
+body.stop {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 20px !important;
+  background-color: var(--second-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 30px !important;
+  background-color: var(--third-color) !important;
+  border: 3px solid var(--second-color);
+}
+
 button {
   cursor: none !important;
 }
@@ -394,36 +409,6 @@ svg {
   margin-left: 1090px;
 }
 
-@-webkit-keyframes fall {
-  0% {
-    top: -20%;
-  }
-  20% {
-    top: 0%;
-  }
-  80% {
-    top: 85%;
-  }
-  100% {
-    top: 100%;
-  }
-}
-
-@keyframes fall {
-  0% {
-    top: -20%;
-  }
-  20% {
-    top: 0%;
-  }
-  80% {
-    top: 85%;
-  }
-  100% {
-    top: 100%;
-  }
-}
-
 @-webkit-keyframes rotate-layer {
   0% {
     -webkit-transform: skew(-30deg);
@@ -532,7 +517,7 @@ svg {
 
 #about .icons a {
   position: relative;
-  z-index: 5;
+  z-index: 4;
   color: var(--main-color);
   margin: 10px;
   background-color: var(--second-color);
@@ -1340,6 +1325,8 @@ svg {
 }
 
 #contact button {
+  position: relative;
+  z-index: 5;
   padding: 10px 30px;
   border: none;
   border-radius: 50px;
@@ -1469,7 +1456,7 @@ footer span {
 
 .go-top {
   position: fixed;
-  bottom: 25px;
+  bottom: 30px;
   right: 25px;
   width: 50px;
   height: 50px;
@@ -1484,7 +1471,7 @@ footer span {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 50%;
-  color: var(--main-color) !important;
+  color: var(--main-color);
   z-index: 100;
   -webkit-transition: .5s;
   transition: .5s;
@@ -1493,12 +1480,14 @@ footer span {
 }
 
 .go-top:hover {
-  background-color: var(--second-color);
+  background-color: #9c5a00;
+  color: var(--second-color);
+  text-decoration: none;
 }
 
 .hire-me {
   position: fixed;
-  top: 85px;
+  bottom: 30px;
   left: 25px;
   padding: 5px 20px;
   height: 50px;
@@ -1513,7 +1502,7 @@ footer span {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 25px;
-  color: var(--main-color) !important;
+  color: var(--main-color);
   z-index: 100;
   font-weight: bold;
   -webkit-transition: .5s;
@@ -1525,7 +1514,9 @@ footer span {
 }
 
 .hire-me:hover {
-  background-color: var(--second-color);
+  background-color: #9c5a00;
+  color: var(--second-color);
+  text-decoration: none;
 }
 
 @-webkit-keyframes wipe {
@@ -1631,7 +1622,7 @@ footer span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
+  overflow-y: hidden !important;
   -webkit-filter: blur(10px) contrast(15);
           filter: blur(10px) contrast(15);
 }
