@@ -1,0 +1,1134 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900&display=swap')
+
+// Set Html
+html 
+    scroll-behavior: smooth
+
+*
+    margin: 0
+    cursor: none
+
+body 
+    font-family: 'Nunito', sans-serif
+    overflow-x: hidden
+    --black-color: rgba(0, 0, 0, 1)
+    --shadow-color: rgba(0, 0, 0, .1)
+    --white-color: rgba(255, 255, 255, 1)
+    --main-color: #0f0f0f
+    --second-color: #f0f0f0
+    --third-color: #ff9f1c
+    --fourth-color: #2ec4b6 
+    --fifth-color: #817f7f
+    background-color: var(--main-color)
+    
+button 
+    cursor: none !important
+
+    p 
+        margin: 0
+        position: relative
+        z-index: 3
+
+svg
+    display: none
+
+#cursor
+    z-index: 3
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    pointer-events: none
+    transition: alll 0.5s ease
+    transition-property: transform
+    position: absolute
+    background-color: var(--fourth-color)
+    transform: translate(-50%,-50%)
+    transform-origin: 100% 100%
+
+    &.grow 
+        transform: scale(1.5)
+
+// Start Landing Section
+#wrapper 
+    position: relative
+    height: 100vh
+    width: 100%
+    overflow: hidden
+
+    .layer
+        position: absolute 
+        height: 100%
+        width: 100%
+        overflow: hidden
+        background-color: var(--second-color)
+
+        &.top
+            width: 50vw
+            z-index: 2
+            --main-color: #fafafa
+            --second-color: #050505
+            --black-color: rgba(255, 255, 255, 1)
+            --white-color: rgba(0, 0, 0, .1)
+
+        .content-wrap
+            position: absolute
+            width: 100%
+            height: 100%
+
+        .bord
+            width: 100%
+            position: absolute
+            left: 0
+            bottom: 0
+            background-color: var(--main-color)
+            height: 60px
+
+    &:nth-last-of-type(2)
+        bottom: auto
+        top: 0
+        z-index: -1
+
+.content-body
+    width: 100vw
+    height: 100%
+    color: var(--second-color)
+    overflow: hidden
+    position: relative
+    filter: url(#liq)
+
+    .particle
+        width: 100px
+        height: 100px
+        top: -20%
+        background-color: var(--main-color)
+        position: absolute
+        border-radius: 50%
+        animation: fall 15s infinite
+
+        &:nth-of-type(2n)
+            width: 60px
+            height: 60px
+
+        &:nth-of-type(3n)
+            width: 120px
+            height: 120px
+
+        &:nth-of-type(1)
+            left: 30%
+            animation-delay: 1s
+        
+        &:nth-of-type(2)
+            left: 60%
+            animation-delay: 2s
+
+        &:nth-of-type(3)
+            left: 85%
+            animation-delay: 3s
+
+        &:nth-of-type(4)
+            left: 75%
+            animation-delay: 4s
+
+        &:nth-of-type(5)
+            left: 35%
+            animation-delay: 5s
+
+        &:nth-of-type(6)
+            left: 50%
+            animation-delay: 6s
+
+        &:nth-of-type(7)
+            left: 65%
+            animation-delay: 7s
+
+        &:nth-of-type(8)
+            left: 15%
+            animation-delay: 8s
+
+        &:nth-of-type(9)
+            left: 55%
+            animation-delay: 9s
+
+        &:nth-of-type(10)
+            left: 55%
+            animation-delay: 10s
+
+        &:nth-of-type(11)
+            left: 30%
+            animation-delay: 12s
+
+        &:nth-of-type(12)
+            left: 80%
+            animation-delay: 12s
+
+        &:nth-of-type(13)
+            left: 45%
+            animation-delay: 13s
+
+        &:nth-of-type(14)
+            left: 60%
+            animation-delay: 14s
+
+        &:nth-of-type(15)
+            left: 35%
+            animation-delay: 15s
+
+    .border
+        position: absolute
+        background-color: var(--main-color)
+        width: 110%
+        height: 60px
+       
+        left: 0
+        border: solid 1px var(--main-color) !important
+        z-index: -1
+        border-radius: 0px
+
+        &:nth-last-of-type(2)
+            top: auto
+            bottom: -1px
+            
+    .text 
+        background-color: var(--main-color)
+        text-align: center
+        width: 450px
+        height: 450px
+        border-radius: 50%
+        padding: 20px
+        position: absolute
+        top: 50%
+        left: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        transform: translate(-50%,-50%)
+
+        h2 
+            z-index: 7
+            color: var(--second-color)
+            font-size: 3rem
+            font-weight: bold
+
+.navbar 
+        padding: 10px
+        height: 60px
+        z-index: 5 !important
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        transition: .5s
+
+        .navbar-brand
+            position: relative
+            z-index: 5 !important
+             
+            img
+               width: 50px     
+        
+        .nav-link , .nav-item.active > .nav-link
+            color: var(--third-color) !important
+            position: relative
+            z-index: 5 !important
+            transition: .5s
+            text-align: center
+        
+        .nav-link
+            margin: 0 10px 
+            min-width: 100px
+            text-align: center
+            text-transform: uppercase
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+
+            .line 
+                transition: .5s
+                height: 5px
+                width: 0%
+                background-color: var(--black-color)
+                border-radius: 2px
+            
+            &:hover
+                color: #000000 !important
+                z-index: 1000
+                font-weight: bolder
+
+                .line
+                    width: 100%
+                
+        .nav-item.active > .nav-link
+            background-color: var(--third-color) !important
+            color: var(--second-color) !important
+            border-radius: 50px
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+            .line
+                display: none
+            
+            &:hover
+                font-weight: normal
+
+.handle
+    z-index: 3
+    position: absolute
+    height: 100%
+    width: 1px
+    display: block
+    background-color: transparent
+    top: 0
+    left: 50%    
+
+.skewed 
+
+    .handle
+        height: 200%
+        top: 50%
+        transform: rotate(30deg) translateY(-50%)
+        transform-origin: top
+
+    .top 
+        margin-left: -1090px
+        width: calc( 50vw + 1090px )
+        border-radius: 0% 100% 100% 0% / 0% 0% 100% 100%  
+        animation: rotate-layer 10s ease-in infinite 
+
+        .content-wrap
+            animation: rotate-content 10s ease-in infinite
+            margin-left: 1090px
+
+@keyframes fall
+    0%
+            top: -20%
+
+    20% 
+            top: 0%
+
+    80%
+            top: 85%
+
+    100%
+            top: 100%
+
+@keyframes rotate-layer
+    0% 
+        transform: skew(-30deg)
+    50%
+        transform: skew(-40deg)
+    100%
+        transform: skew(-30deg)
+
+@keyframes rotate-content
+    0% 
+        transform: skew(30deg)
+    50%
+        transform: skew(40deg)
+    100%
+        transform: skew(30deg)
+        
+
+// Start About Us Section
+#about 
+    position: relative
+    padding: 50px 0
+    overflow: hidden
+    width: 100%
+    color: var(--second-color)
+    padding-bottom: 110px 
+
+    &::before
+        content: ""
+        position: absolute
+        left: -50%
+        top: 0
+        width: 200%
+        height: 100%
+        background-color: var(--main-color)
+        border-radius: 0 0 50% 50% / 0% 0% 100% 100% 
+        transform: scale(1.2)
+
+    h1 
+        margin: 0
+        color: var(--third-color)
+        margin-bottom: 25px
+        font-weight: bolder
+        font-size: 3rem
+
+    .icons
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+
+        a 
+            position: relative
+            z-index: 5
+            color: var(--main-color)
+            margin: 10px
+            background-color: var(--second-color)
+            height: 60px
+            width: 60px
+            border-radius: 50%
+            
+            i 
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                z-index: 3
+
+            .blured
+                position: relative
+                top: 0
+                left: 0
+                width: 50px
+                height: 50px
+                border-radius: 100%
+                filter: url(#liq)
+
+                &::before
+                    content: ""
+                    position: absolute
+                    width: 50px
+                    height: 50px
+                    transform: translate(-50%, -50%)
+                    top: 50%
+                    left: 50%
+                    background-color: var(--second-color)
+                    border-radius: 100%
+                    transition: 1.5s cubic-bezier(0,2,.61,-0.05)
+
+                &::after
+                    content: ""
+                    position: absolute
+                    width: 50px
+                    height: 50px
+                    transform: translate(-50%, -50%)
+                    top: 50%
+                    left: 50%
+                    background-color: var(--second-color)
+                    border-radius: 100%
+                    transition: 1.7s cubic-bezier(0,2,.61,-0.05)
+
+                span:nth-of-type(1)
+                    position: absolute
+                    width: 50px
+                    height: 50px
+                    top: 0
+                    left: 0
+                    background-color: var(--second-color)
+                    border-radius: 100%
+                    transition: 1.5s cubic-bezier(0,2,.61,-0.05)
+
+                span:nth-of-type(2)
+                    position: absolute
+                    width: 50px
+                    height: 50px
+                    top: 0
+                    left: 0
+                    background-color: var(--second-color)
+                    border-radius: 100%
+                    transition: 1.7s cubic-bezier(0,2,.61,-0.05)
+
+            &:hover
+
+                .blured
+                    animation: rotate 2s ease-in infinite
+                    
+                    &::before
+                       width: 40px
+                       height: 40px
+                       top: 50% 
+                       left: 50%
+
+                    &::after
+                       width: 15px
+                       height: 15px
+                       top: 0px 
+                       left: 45px
+
+                    span:nth-of-type(1)
+                       width: 30px
+                       height: 30px
+                       top: -15px 
+                       left: -15px
+
+                    span:nth-of-type(2)
+                       width: -25px
+                       height: -25px
+                       top: 20px 
+                       left: 30px
+
+@keyframes rotate
+    0%, 100%
+        transform: scale(1)
+    50%
+        transform: scale(.9)
+    
+
+// Start Skills Section
+#skills
+    padding: 50px 0
+    background-color: var(--second-color)
+
+    h1 
+        margin-top: 0
+        color: var(--third-color)
+        font-weight: bolder
+        font-size: 3rem
+
+    .row
+        margin-bottom: 30px
+
+    .skill
+        position: relative
+        padding: 40px
+        width: 95%
+        margin: auto
+        margin-bottom: 30px
+        transition: 1s
+        border-radius: 20px
+        overflow: hidden
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        box-shadow: inset -6px -6px 20px var(--shadow-color), inset 6px 6px 20px var(--white-color)
+
+        img 
+            position: relative
+            z-index: 2
+            width: 100px
+            transition: .5s
+            filter: grayscale(100%)
+
+        h3 
+            z-index: 2
+            transition: .5s
+            font-weight: bold
+            margin-top: 5px
+
+        .line
+            z-index: 2
+            width: 0
+            height: 5px
+            background-color: var(--main-color)
+            border-radius: 5px
+            transition: .5s
+            margin-bottom: 10px 
+
+        p 
+            z-index: 2
+            color: var(--fifth-color)
+            max-width: 300px
+
+        &::after
+            content: ""
+            position: absolute
+            right: 0
+            bottom: 0 
+            width: 100%
+            height: 100%
+            clip-path: circle(27% at 0% 100%)
+            transition: 1s
+            background-color: var(--main-color)
+            box-shadow: inset -6px -6px 20px var(--shadow-color), inset 6px 6px 20px var(--white-color)
+            
+
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            top: 0 
+            width: 100%
+            height: 100%
+            clip-path: circle(30% at 80% 20%)
+            transition: 1s
+            background-color: var(--third-color)
+            box-shadow: inset -6px -6px 20px var(--shadow-color), inset 6px 6px 20px var(--white-color)
+
+        &:hover 
+            transform: scale(1.1)
+            z-index: 2
+            box-shadow: 6px 6px 20px var(--shadow-color), -6px -6px 20px var(--white-color)
+
+            img     
+                filter: grayscale(0%)
+                transform: scale(1.1)
+
+            .line
+                width: 20px
+
+            &::before
+                box-shadow: 6px 6px 20px var(--shadow-color), -6px -6px 20px var(--white-color)
+                clip-path: circle(37% at 80% 20%)
+
+            &::after
+                box-shadow: 6px 6px 20px var(--shadow-color), -6px -6px 20px var(--white-color)
+                clip-path: circle(20% at 0% 100%)
+                // animation: beat 3s ease infinite
+
+@keyframes beat
+    0%
+        clip-path: circle(30% at 80% 20%)
+
+    100%
+        clip-path: circle(27% at 0% 100%)
+
+
+// Start Work Section
+#work
+    width: 100%
+    min-height: 100vh
+    padding: 50px 0 0 0
+    color: #ffffff
+    background-color: var(--third-color)
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    h1 
+        margin-top: 0
+        color: var(--main-color)
+        font-weight: bolder
+        font-size: 3rem
+
+    .panels
+        width: 100%
+        min-height: calc( 100vh - 100px )
+        overflow: hidden
+        display: flex
+        flex-wrap: wrap
+        
+.panel
+    background: var(--main-color)
+    box-shadow: inset 0 0 5px 10px rgba(0, 0, 0, 0.3)
+    color: white
+    text-align: center
+    align-items: center
+    transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s
+    font-size: 20px
+    background-size: cover
+    background-position: center
+    flex: 1
+    justify-content: center
+    display: flex
+    flex-direction: column
+    filter: grayscale(100%)
+ 
+.panel1
+    background-image: url(../img/1.png)
+ 
+.panel2
+    background-image: url(../img/2.png)
+ 
+.panel3
+    background-image: url(../img/5.png)
+ 
+.panel4
+    background-image: url(../img/4.png)
+ 
+.panel5
+    background-image: url(../img/3.png)
+  
+.panel
+    > *
+        margin: 0
+        width: 100%
+        transition: transform 0.5s
+        flex: 1 0 auto
+        display: flex
+        justify-content: center
+        align-items: center
+ 
+        &:first-child
+            transform: translateY(100%)
+
+        &:last-child
+            transform: translateY(100%)
+ 
+    &.open-active
+        > *:first-child, > *:last-child
+            transform: translateY(0)
+            filter: grayscale(0%)
+
+    .info
+        position: relative
+        z-index: 2
+        display: flex
+        flex-direction: column
+ 
+    h4
+        position: relative
+        z-index: 2
+        width: 100%
+        text-transform: uppercase
+        text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45)
+        font-size: 2em
+        font-weight: bold
+
+    .desc 
+        width: 100%
+
+    .info
+        width: 100%
+
+        a 
+            display: block
+            width: 200px
+            background-color: var(--third-color)
+            margin: 20px 5px
+            padding: 10px 10px
+            border-radius: 50px
+            color: var(--main-color)
+            transition: .5s 
+            font-size: 18px
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+            &:hover
+                background-color: darken(#ff9f1c, 25)
+                color: var(--second-color)
+                text-decoration: none
+ 
+    &.open
+        transition: .5s
+
+        &:hover    
+            flex: 5
+            filter: grayscale(0%)
+
+            h4:nth-child(1)
+                transform: translateY(-25%)
+                font-size: 2.5em
+
+            &::before
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                display: block
+                width: 100%
+                height: 100%
+                background: linear-gradient(to bottom, rgba(155, 155, 155, 0), black)
+                z-index: 1
+                transition: 1s all
+                opacity: 1
+
+// Start Services Section
+#services
+    padding: 50px 0
+    background-color: var(--second-color)
+
+    h1 
+        margin-top: 0
+        color: var(--third-color)
+        font-weight: bolder
+        font-size: 3rem
+
+    .service 
+        position: relative
+        height: 80%
+        padding: 40px
+        margin: 20px
+        border-radius: 10px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        box-shadow: 6px 6px 20px var(--shadow-color), -6px -6px 20px var(--white-color)
+
+        h4 
+            font-weight: bolder
+            color: var(--third-color)
+
+        .image
+            position: absolute
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            z-index: 1
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: black
+            overflow: hidden
+            transition: .5s ease-in-out
+            border-radius: 10px
+            box-shadow: -6px -6px 20px var(---white-color), 6px 6px 20px var(--shadow-color)
+            
+            img
+                width: 75px
+
+            &:before
+                content: attr(data-text)
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 100%
+                text-align: center
+                font-size: 4rem
+                color: rgba(255, 255, 255, .1)
+                font-weight: 700
+                z-index: 5
+
+        &:hover
+        
+            .image
+                width: 40%
+                height: 40%
+                transform: translate(-50%,-40%)
+                background-color: var(--third-color)
+
+                &::before
+                    content: ""
+
+// Contact Section
+#contact
+    padding: 50px 0
+    height: 100vh
+    position: relative
+    color: #ffffff
+    overflow: hidden
+
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 50%
+        height: 100%
+        background-color: var(--third-color)
+
+    h1 
+        margin-top: 0
+        position: relative
+        color: var(--second-color)
+        font-weight: bolder
+        font-size: 3rem
+        z-index: 1
+
+    .row 
+        position: relative
+
+    .info-card
+        position: absolute
+        width: 95%
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        flex-direction: column
+        height: 400px
+        border-radius: 20px
+        z-index: 2
+        color: var(--second-color)
+        background-color: var(--main-color)
+        transform: translateY(7.5%)
+        box-shadow: 0 20px 20px rgba(0, 0, 0, .3)
+
+        h3 
+            font-weight: bold
+
+        .info
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+
+            span
+                display: flex 
+                justify-content: center
+                align-items: center
+                margin-bottom: 30px
+
+                i 
+                    margin: 0 5px
+
+                p 
+                    margin: 0
+
+    .message-card
+        height: 100%
+        background-color: var(--second-color)
+        overflow: hidden 
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        flex-direction: column
+        padding: 20px 0
+        border-radius: 20px
+        box-shadow: 0 20px 20px rgba(0, 0, 0, .3)
+
+        h3 
+            text-align: center
+            font-weight: bold
+            color: var(--main-color)
+
+        #form
+            width: 80%
+            float: right
+            display: flex
+            justify-content: space-around
+            flex-wrap: wrap
+
+            div
+                display: flex
+                flex-wrap: wrap
+                position: relative
+                width: 40%
+                margin: 15px 0
+
+                input , textarea
+                    position: relative
+                    resize: none
+                    width: 100% !important
+                    border: none
+                    padding: 5px 0
+                    background-color: var(--second-color)
+                    outline: none
+                    border-bottom: 3px solid var(--main-color)  
+                    opacity: .5   
+
+                span 
+                    position: absolute
+                    left: 0
+                    top: 0
+                    padding: 5px 0
+                    font-size: 18px
+                    transition: .5s
+                    color: var(--fifth-color)
+                    pointer-events: none
+                    opacity: .5
+
+                input:focus ~ span, textarea:focus ~ span, input:valid ~ span, textarea:valid ~ span
+                    transform: translateY(-20px)
+                    font-size: 14px
+                    letter-spacing: 1px
+                    color: var(--third-color)
+                    opacity: 1
+
+            .textarea 
+                width: 90%
+
+                textarea
+                    min-height: 120px
+
+    button
+        padding: 10px 30px
+        border: none
+        border-radius: 50px
+        color: var(--second-color)
+        background-color: var(--third-color)
+        transition: .5s
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+        &:hover
+            background-color: #d47b06
+
+    #status
+        display: none !important
+        max-width: 500px
+        text-align: center
+        padding: 10px 30px
+        margin: 10px auto
+        border-radius: 25px
+
+        &.success
+            display: block !important
+            background-color: rgb(5, 204, 48) !important
+            animation: status 4s ease forwards
+
+        &.error
+            display: block !important
+            background-color: rgb(253, 5, 5) !important
+            color: white
+            animation: status 4s ease forwards
+
+@keyframes status 
+  0% 
+    opacity: 1
+    pointer-events: all
+  
+  90% 
+    opacity: 1
+    pointer-events: all
+  
+  100% 
+    opacity: 0
+    pointer-events: none
+    display: none !important
+  
+// Start Footer Section
+footer 
+    height: 50px
+    padding: 20px 0
+    display: flex
+    justify-content: center
+    align-items: center
+    color: var(--second-color)
+
+    .end
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+
+    p 
+        margin: 0
+
+    i 
+        padding: 0 2px
+        color: var(--third-color)
+        animation: beat 2s infinite
+
+    span 
+        font-size: 18px
+        color: var(--third-color)
+        font-weight: bold
+
+@keyframes beat
+    0%, 100%
+        transform: scale(1)
+    50%
+        transform: scale(1.3)
+
+// Start Go Top Button
+.go-top 
+    position: fixed
+    bottom: 25px
+    right: 25px
+    width: 50px
+    height: 50px
+    background-color: var(--third-color)
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    color: var(--main-color) !important
+    z-index: 100
+    transition: .5s
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
+
+    &:hover
+        background-color: var(--second-color)
+        
+// Start HIre Me Button
+
+.hire-me 
+    position: fixed
+    top: 85px
+    left: 25px
+    padding: 5px 20px
+    height: 50px
+    background-color: var(--third-color)
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 25px
+    color: var(--main-color) !important
+    z-index: 100
+    font-weight: bold
+    transition: .5s
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
+    animation: wipe 4s ease-in-out infinite 
+
+    &:hover
+        background-color: var(--second-color)
+
+
+@keyframes wipe
+    0%, 100%
+        transform: rotate(0deg)
+    10%
+        transform: rotate(0deg) translate3d(0,0,0)
+    20%
+        transform: rotate(5deg) translate3d(0,0,0)
+    30%
+        transform: rotate(-1deg) translate3d(0,0,0)
+    40%
+        transform: rotate(3deg) translate3d(0,0,0)
+    50%
+        transform: rotate(-3eg) translate3d(0,0,0)
+    60%
+        transform: rotate(2deg) translate3d(0,0,0)
+    70%
+        transform: rotate(0deg) translate3d(0,0,0)
+    80%
+        transform: rotate(3deg) translate3d(0,0,0)
+    90%
+        transform: rotate(-4deg) translate3d(0,0,0)
+
+// Start Loader section
+#loader
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    z-index: 1000  
+    background-color: var(--second-color)
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    filter: blur(10px) contrast(15)
+    //animation: rot 20s linear infinite
+
+    &.remove
+        animation: vanish .5s forwards
+
+    .part
+        width: 100px
+        height: 100px
+        background-color: var(--main-color) 
+        border-radius: 50px
+
+        &:first-child, &:last-child
+            width: 50px
+            height: 50px
+
+        &:nth-child(1),&:nth-child(3),&:nth-child(5),&:nth-child(7),&:nth-child(9)
+            animation: pulse 1.3s ease-in-out infinite
+
+        &.left-spin
+            animation: left 2.5s linear infinite
+
+        &.right-spin
+            animation: right 2s linear infinite
+
+
+@keyframes pulse
+    0%,100%
+        transform: scale(1)
+    50%
+        transform: scale(1.7)
+    50%
+        transform: scale(.7)
+
+@keyframes left
+    from
+       transform: rotate(0deg) translateX(50px) 
+    to
+        transform: rotate(360deg) translateX(50px) 
+
+@keyframes right
+    from
+       transform: rotate(360deg) translateX(50px) 
+    to
+        transform: rotate(0deg) translateX(50px) 
+            
+@keyframes rot
+    from
+       transform: rotate(360deg) 
+    to
+        transform: rotate(0deg) 
+
+@keyframes vanish
+    100%
+        opacity: 0
+        visibility: hidden
+            
