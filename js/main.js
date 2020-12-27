@@ -82,3 +82,17 @@ window.addEventListener("load", () => {
   document.querySelector("#loader").classList.add("remove");
   document.body.classList.remove("stop");
 });
+
+window.addEventListener("click", () => {
+  let ripple = document.createElement("span");
+  document.querySelector("#cursor").appendChild(ripple);
+
+  setTimeout(() => {
+    ripple.remove();
+  }, 500);
+});
+
+document.querySelector(".nav-btn").addEventListener("click", () => {
+  document.querySelector(".navbar .container").classList.toggle("open");
+  document.querySelector(".nav-btn").classList.toggle("clicked");
+});

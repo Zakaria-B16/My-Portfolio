@@ -46,6 +46,7 @@ svg
     display: none
 
 #cursor
+    position: absolute
     z-index: 3
     width: 50px
     height: 50px
@@ -53,13 +54,33 @@ svg
     pointer-events: none
     transition: alll 0.5s ease
     transition-property: transform
-    position: absolute
+    overflow: hidden
     background-color: var(--fourth-color)
     transform: translate(-50%,-50%)
     transform-origin: 100% 100%
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
+
+    span
+        position: absolute
+        background-color: darken(#2ec4b6, 5)
+        pointer-events: none
+        border-radius: 50%
+        animation: animate .5s linear infinite
+        transform: translate(-50%,-50%)
+        opacity: 1
 
     &.grow 
         transform: scale(1.5)
+
+@keyframes animate
+    0%
+        width: 0px
+        height: 0px
+
+    100%
+        width: 150px
+        height: 150px
+        opacity: 0
 
 // Start Landing Section
 #wrapper 
@@ -224,65 +245,137 @@ svg
             font-weight: bold
 
 .navbar 
-        padding: 10px
-        height: 60px
+    padding: 10px
+    height: 60px
+    z-index: 5 !important
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    transition: .5s
+
+    .nav-item
+        display: inline-block !important
+
+
+    .navbar-brand
+        position: relative
         z-index: 5 !important
-        position: fixed
-        top: 0
-        left: 0
-        width: 100%
-        transition: .5s
-
-        .navbar-brand
-            position: relative
-            z-index: 5 !important
              
-            img
-               width: 50px     
+        img
+            width: 50px     
         
-        .nav-link , .nav-item.active > .nav-link
-            color: var(--third-color) !important
-            position: relative
-            z-index: 5 !important
+    .nav-link , .nav-item.active > .nav-link
+        color: var(--third-color) !important
+        position: relative
+        z-index: 5 !important
+        transition: .5s
+        text-align: center
+        
+    .nav-link
+        margin: 0 10px 
+        min-width: 100px
+        text-align: center
+        text-transform: uppercase
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+        .line 
             transition: .5s
-            text-align: center
-        
-        .nav-link
-            margin: 0 10px 
-            min-width: 100px
-            text-align: center
-            text-transform: uppercase
-            display: flex
-            justify-content: center
-            align-items: center
-            flex-direction: column
-
-            .line 
-                transition: .5s
-                height: 5px
-                width: 0%
-                background-color: var(--black-color)
-                border-radius: 2px
+            height: 5px
+            width: 0%
+            background-color: var(--black-color)
+            border-radius: 2px
             
-            &:hover
-                color: #000000 !important
-                z-index: 1000
-                font-weight: bolder
-
-                .line
-                    width: 100%
-                
-        .nav-item.active > .nav-link
-            background-color: var(--third-color) !important
-            color: var(--second-color) !important
-            border-radius: 50px
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        &:hover
+            color: #000000 !important
+            z-index: 1000
+            font-weight: bolder
 
             .line
-                display: none
+                 width: 100%
+                
+    .nav-item.active > .nav-link
+        background-color: var(--third-color) !important
+        color: var(--second-color) !important
+        border-radius: 50px
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
+
+        .line
+            display: none
             
-            &:hover
-                font-weight: normal
+        &:hover
+            font-weight: normal
+
+    .nav-btn
+        position: relative
+        z-index: 5
+        display: none !important
+        width: 50px
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        border: none
+        background-color: transparent
+        
+        &.clicked 
+            
+            span:nth-of-type(1)
+                transform: rotate(45deg) translate(10px, 10px)
+
+            span:nth-of-type(2)
+                opacity: 0
+
+            span:nth-of-type(3)
+                transform: rotate(-45deg) translate(10px, -10px)
+
+        span
+            transition: .5s
+            border-radius: 5px
+            width: 45px
+            height: 8px
+            margin: 3px 0
+            background-color: var(--third-color)
+
+@media screen and ( max-width: 992px )
+    .navbar
+        padding: 0 10px
+        
+
+        .navbar-container
+            display: none
+            transition: .5s
+            transform: translatex(100%)
+
+        .container
+            transition: .6s
+            margin: auto !important
+
+            &.open
+                display: block !important
+                background-color: var(--second-color) !important
+                border-radius: 10px
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                .navbar-container
+                    display: block !important
+                    transform: translatex(0)
+    
+
+        .navbar-mob
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            padding: 0 5px
+
+        .nav-btn
+            display: flex !important
+        
 
 .handle
     z-index: 3
@@ -702,7 +795,7 @@ svg
             box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
             &:hover
-                background-color: darken(#ff9f1c, 25)
+                background-color: darken(#ff9f1c, 12)
                 color: var(--second-color)
                 text-decoration: none
  
@@ -742,6 +835,7 @@ svg
         font-size: 3rem
 
     .service 
+        text-align: center
         position: relative
         height: 80%
         padding: 40px
@@ -753,7 +847,11 @@ svg
         align-items: center
         box-shadow: 6px 6px 20px var(--shadow-color), -6px -6px 20px var(--white-color)
 
+        p 
+            min-height: 100%
+
         h4 
+            margin: 10px auto
             font-weight: bolder
             color: var(--third-color)
 
@@ -763,7 +861,6 @@ svg
             height: 100%
             left: 0
             top: 0
-            z-index: 1
             display: flex
             justify-content: center
             align-items: center
@@ -773,8 +870,11 @@ svg
             border-radius: 10px
             box-shadow: -6px -6px 20px var(---white-color), 6px 6px 20px var(--shadow-color)
             
-            img
-                width: 75px
+            i
+                position: relative
+                z-index: 6
+                color: var(--third-color)
+                font-size: 6rem
 
             &:before
                 content: attr(data-text)
@@ -788,14 +888,21 @@ svg
                 color: rgba(255, 255, 255, .1)
                 font-weight: 700
                 z-index: 5
+                display: flex
+                justify-content: center
+                align-items: center
 
         &:hover
         
             .image
-                width: 40%
-                height: 40%
+                width: 35%
+                height: 35%
                 transform: translate(-50%,-40%)
                 background-color: var(--third-color)
+
+                i 
+                    font-size: 3rem
+                    color: var(--main-color)
 
                 &::before
                     content: ""
@@ -844,7 +951,12 @@ svg
         box-shadow: 0 20px 20px rgba(0, 0, 0, .3)
 
         h3 
+            margin: 10px
+            text-align: center
             font-weight: bold
+
+            img
+                width: 40px
 
         .info
             display: flex
@@ -853,16 +965,29 @@ svg
             flex-direction: column
 
             span
+                position: relative
+                z-index: 4
                 display: flex 
-                justify-content: center
+                justify-content: space-between
                 align-items: center
                 margin-bottom: 30px
 
                 i 
                     margin: 0 5px
+                    float: left
 
                 p 
                     margin: 0
+
+            .social
+                margin-top: 10px
+                font-size: 1.5rem
+
+                a 
+                    color: var(--second-color) !important
+                    margin: 7px
+                    position: relative !important
+                    z-index: 4 !important
 
     .message-card
         height: 100%
@@ -951,6 +1076,7 @@ svg
         padding: 10px 30px
         margin: 10px auto
         border-radius: 25px
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
 
         &.success
             display: block !important
@@ -976,6 +1102,16 @@ svg
     opacity: 0
     pointer-events: none
     display: none !important
+
+@media screen and ( max-width: 992px )
+    #contact
+
+        .container
+            padding: 0 15px
+            margin: 0 auto
+
+@media screen and ( max-width: 768px )
+    #contact
   
 // Start Footer Section
 footer 
@@ -1029,12 +1165,11 @@ footer
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
 
     &:hover
-        background-color: darken(#ff9f1c, 25)
+        background-color: darken(#ff9f1c, 12)
         color: var(--second-color)
         text-decoration: none
         
 // Start HIre Me Button
-
 .hire-me 
     position: fixed
     bottom: 30px
@@ -1054,7 +1189,7 @@ footer
     animation: wipe 4s ease-in-out infinite 
 
     &:hover
-        background-color: darken(#ff9f1c, 25)
+        background-color: darken(#ff9f1c, 12)
         color: var(--second-color)
         text-decoration: none
 

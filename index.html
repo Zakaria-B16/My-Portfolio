@@ -41,12 +41,19 @@
     <!-- ################### End LOading Section ###################### -->
     <!-- ################### Start Landing Section ###################### -->
     <section id="wrapper" class="skewed">
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="#"
-            ><img src="./img/Logo-bz.png" alt="Logo-bz"
-          /></a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="navbar-mob">
+            <a class="navbar-brand" href="#"
+              ><img src="./img/Logo-bz.png" alt="Logo-bz"
+            /></a>
+            <button class="nav-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="navbar-container">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="#wrapper"
@@ -400,67 +407,92 @@
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="service">
-              <div class="image" data-text="Design">
-                <img src="img/icons/2.png" alt="2" />
+              <div class="image" data-text="Information Gathering">
+                <i class="fa fa-info" aria-hidden="true"></i>
               </div>
-              <h4>Design</h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dolorum, corrupti! Nostrum impedit voluptatibus quibusdam
-                ducimus!
-              </p>
+              <div class="text">
+                <h4>Information Gathering</h4>
+                <p>
+                  The first step in designing a successful web site is to gather
+                  information. Many things need to be taken into consideration
+                  when the look and feel of your site is created.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="service">
+              <div class="image" data-text="Planning">
+                <i class="fas fa-drafting-compass"></i>
+              </div>
+              <div class="text">
+                <h4>Planning</h4>
+                <p>
+                  Using the information gathered from phase one, it is time to
+                  put together a plan for your web site. This is the point where
+                  a site map is developed.
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="service">
               <div class="image" data-text="Design">
-                <img src="img/icons/2.png" alt="2" />
+                <i class="fas fa-pencil-ruler"></i>
               </div>
-              <h4>Design</h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dolorum, corrupti! Nostrum impedit voluptatibus quibusdam
-                ducimus!
-              </p>
+              <div class="text">
+                <h4>Design</h4>
+                <p>
+                  Drawing from the information gathered up to this point, it’s
+                  time to determine the look and feel of your site.
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="service">
-              <div class="image" data-text="Design">
-                <img src="img/icons/2.png" alt="2" />
+              <div class="image" data-text="Development">
+                <i class="fas fa-file-code"></i>
               </div>
-              <h4>Design</h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dolorum, corrupti! Nostrum impedit voluptatibus quibusdam
-                ducimus!
-              </p>
+              <div class="text">
+                <h4>Development</h4>
+                <p>
+                  The developmental stage is the point where the web site itself
+                  is created. At this time, your web designer will take all of
+                  the individual graphic elements from the prototype and use
+                  them to create the actual, functional site.
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="service">
-              <div class="image" data-text="Design">
-                <img src="img/icons/2.png" alt="2" />
+              <div class="image" data-text="Testing and Delivery">
+                <i class="fas fa-vial"></i>
               </div>
-              <h4>Design</h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dolorum, corrupti! Nostrum impedit voluptatibus quibusdam
-                ducimus!
-              </p>
+              <div class="text">
+                <h4>Testing and Delivery</h4>
+                <p>
+                  Testing is probably the most routine part of a process. Every
+                  single link should be tested to make sure that there are no
+                  broken ones among them.
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="service">
-              <div class="image" data-text="Design">
-                <img src="img/icons/2.png" alt="2" />
+              <div class="image" data-text="Maintenance">
+                <i class="fa fa-wrench" aria-hidden="true"></i>
               </div>
-              <h4>Design</h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dolorum, corrupti! Nostrum impedit voluptatibus quibusdam
-                ducimus!
-              </p>
+              <div class="text">
+                <h4>Maintenance</h4>
+                <p>
+                  What’s important to remember is that a website is more of a
+                  service than a product. It’s not enough to “deliver” a website
+                  to a user.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -474,11 +506,25 @@
         <div class="row align-items-center">
           <div class="col-md-4 contact-info">
             <div class="info-card">
-              <h3>Contact Info</h3>
+              <h3><img src="img/Logo-bz.png" alt="" /> Zakaria BOURENANE</h3>
               <div class="info">
-                <span>Seddouk Bejaia Algeria</span>
-                <span>Seddouk Bejaia Algeria</span>
-                <span>Seddouk Bejaia Algeria</span>
+                <span>
+                  <i class="fa fa-map" aria-hidden="true"></i>Seddouk Bejaia
+                  ALGERIA</span
+                >
+                <span>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  zakaria.bourenane16@gmail.com</span
+                >
+                <span
+                  ><i class="fa fa-phone" aria-hidden="true"></i> +213 798 323
+                  898</span
+                >
+                <span class="social"
+                  ><a href=""><i class="fab fa-facebook-f"></i></a>
+                  <a href=""><i class="fab fa-linkedin-in"></i></a>
+                  <a href=""><i class="fab fa-github" aria-hidden="true"></i></a
+                ></span>
               </div>
             </div>
           </div>
