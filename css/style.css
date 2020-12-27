@@ -547,6 +547,36 @@ svg {
   margin-left: 1090px;
 }
 
+@-webkit-keyframes fall {
+  0% {
+    top: -20%;
+  }
+  20% {
+    top: 0%;
+  }
+  80% {
+    top: 85%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes fall {
+  0% {
+    top: -20%;
+  }
+  20% {
+    top: 0%;
+  }
+  80% {
+    top: 85%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
 @-webkit-keyframes rotate-layer {
   0% {
     -webkit-transform: skew(-30deg);
