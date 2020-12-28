@@ -32,7 +32,14 @@ body
     border-radius: 30px !important
     background-color: var(--third-color) !important
     border: 3px solid var(--second-color)
-    
+
+::-moz-selection 
+    color: var(--main-color)
+    background-color: var(--fourth-color)
+
+::selection 
+    color: var(--main-color)
+    background-color: var(--fourth-color)
     
 button 
     cursor: none !important
@@ -247,7 +254,7 @@ svg
 .navbar 
     padding: 10px
     height: 60px
-    z-index: 5 !important
+    z-index: 6 !important
     position: fixed
     top: 0
     left: 0
@@ -260,7 +267,7 @@ svg
 
     .navbar-brand
         position: relative
-        z-index: 5 !important
+        z-index: 6 !important
              
         img
             width: 50px     
@@ -268,7 +275,7 @@ svg
     .nav-link , .nav-item.active > .nav-link
         color: var(--third-color) !important
         position: relative
-        z-index: 5 !important
+        z-index: 6 !important
         transition: .5s
         text-align: center
         
@@ -311,7 +318,7 @@ svg
 
     .nav-btn
         position: relative
-        z-index: 5
+        z-index: 6
         display: none !important
         width: 50px
         height: 100%
@@ -321,6 +328,7 @@ svg
         flex-direction: column
         border: none
         background-color: transparent
+        outline: none
         
         &.clicked 
             
@@ -344,7 +352,6 @@ svg
 @media screen and ( max-width: 992px )
     .navbar
         padding: 0 10px
-        
 
         .navbar-container
             display: none
@@ -364,6 +371,9 @@ svg
                 .navbar-container
                     display: block !important
                     transform: translatex(0)
+                    padding: 10px 0
+                    position: relative
+                    z-index: 6
     
 
         .navbar-mob
@@ -372,10 +382,20 @@ svg
             align-items: center
             width: 100%
             padding: 0 5px
+            height: 60px
 
         .nav-btn
             display: flex !important
-        
+
+@media screen and ( max-width: 576px )
+    #wrapper
+
+        .text
+            width: 300px
+            height: 300px
+
+            h2
+               font-size: 2rem
 
 .handle
     z-index: 3
@@ -405,7 +425,7 @@ svg
             animation: rotate-content 10s ease-in infinite
             margin-left: 1090px
 
-@keyframes fall
+//@keyframes fall
     0%
             top: -20%
 
@@ -461,6 +481,9 @@ svg
         margin-bottom: 25px
         font-weight: bolder
         font-size: 3rem
+
+    p 
+        font-size: 18px
 
     .icons
         display: flex
@@ -615,6 +638,7 @@ svg
             transition: .5s
             font-weight: bold
             margin-top: 5px
+            color: var(--fifth-color)
 
         .line
             z-index: 2
@@ -682,6 +706,12 @@ svg
 
     100%
         clip-path: circle(27% at 0% 100%)
+
+@media screen and ( max-width: 768px )
+    #about
+
+        .icons
+            flex-direction: row
 
 
 // Start Work Section
@@ -778,6 +808,8 @@ svg
 
     .desc 
         width: 100%
+        padding: 0 10px
+        text-align: center
 
     .info
         width: 100%
@@ -785,6 +817,7 @@ svg
         a 
             display: block
             width: 200px
+            font-weight: 600
             background-color: var(--third-color)
             margin: 20px 5px
             padding: 10px 10px
@@ -792,7 +825,10 @@ svg
             color: var(--main-color)
             transition: .5s 
             font-size: 18px
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
+
+            i
+                margin-left: 10px
 
             &:hover
                 background-color: darken(#ff9f1c, 12)
@@ -822,6 +858,19 @@ svg
                 z-index: 1
                 transition: 1s all
                 opacity: 1
+
+@media screen and ( max-width: 992px )
+    #work
+
+        .panel
+            
+            &.open:hover
+
+                h4
+                font-size: 1em
+
+            a 
+                margin: 10px auto
 
 // Start Services Section
 #services
@@ -869,6 +918,7 @@ svg
             transition: .5s ease-in-out
             border-radius: 10px
             box-shadow: -6px -6px 20px var(---white-color), 6px 6px 20px var(--shadow-color)
+            z-index: 4
             
             i
                 position: relative
@@ -906,6 +956,16 @@ svg
 
                 &::before
                     content: ""
+
+@media screen and ( max-width: 576px )
+    #services
+
+        .service:hover
+
+            .image
+                width: 30%
+                height: 30%
+
 
 // Contact Section
 #contact
@@ -1112,6 +1172,17 @@ svg
 
 @media screen and ( max-width: 768px )
     #contact
+        height: 100% !important
+        overflow: auto
+
+        .info-card
+            width: 80%
+            margin: auto
+            left: 10%
+
+        .message-card
+            height: 700px
+            margin-top: 345px
   
 // Start Footer Section
 footer 
@@ -1127,6 +1198,7 @@ footer
         display: flex
         justify-content: center
         align-items: center
+        text-align: center
 
     p 
         margin: 0
@@ -1140,6 +1212,14 @@ footer
         font-size: 18px
         color: var(--third-color)
         font-weight: bold
+
+@media screen and ( max-width: 576px )
+  footer
+
+    span 
+        display: block
+
+     
 
 @keyframes beat
     0%, 100%
@@ -1193,6 +1273,9 @@ footer
         color: var(--second-color)
         text-decoration: none
 
+@media screen and ( max-width: 576px)
+    .hire-me, .go-top
+        bottom: 60px
 
 @keyframes wipe
     0%, 100%
@@ -1230,7 +1313,7 @@ footer
     align-items: center
     overflow-y: hidden !important
     filter: blur(10px) contrast(15)
-    //animation: rot 20s linear infinite
+    
 
     &.remove
         animation: vanish .5s forwards

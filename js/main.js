@@ -14,58 +14,67 @@ const panels = document.querySelectorAll(".panel");
 let skew = 0;
 let delta = 0;
 
-// Change Landing Background
-document.addEventListener("DOMContentLoaded", function () {
-  if (wrapper.className.indexOf("skewed") != -1) {
-    skew = 1000;
-  }
+if (
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
+) {
+  // true for mobile device
+  cursor.style.display = "none";
+} else {
+  // Change Landing Background
+  document.addEventListener("DOMContentLoaded", function () {
+    if (wrapper.className.indexOf("skewed") != -1) {
+      skew = 1000;
+    }
 
-  wrapper.addEventListener("mousemove", function (e) {
-    delta = (e.clientX - window.innerWidth / 2) * 0.5;
+    wrapper.addEventListener("mousemove", function (e) {
+      delta = (e.clientX - window.innerWidth / 2) * 0.5;
 
-    handle.style.left = e.clientX + delta + "px";
+      handle.style.left = e.clientX + delta + "px";
 
-    topLayer.style.width = e.clientX + skew + delta + "px";
+      topLayer.style.width = e.clientX + skew + delta + "px";
+    });
   });
-});
 
-// Move Cursor
-document.addEventListener("mousemove", (e) => {
-  let x = e.pageX;
-  let y = e.pageY;
+  // Move Cursor
+  document.addEventListener("mousemove", (e) => {
+    let x = e.pageX;
+    let y = e.pageY;
 
-  cursor.style.left = x + "px";
-  cursor.style.top = y + "px";
-});
+    cursor.style.left = x + "px";
+    cursor.style.top = y + "px";
+  });
 
-navLinks.forEach((link) => {
-  link.addEventListener("mouseover", () => {
-    cursor.classList.add("grow");
-    link.classList.add("hovered");
+  navLinks.forEach((link) => {
+    link.addEventListener("mouseover", () => {
+      cursor.classList.add("grow");
+      link.classList.add("hovered");
+    });
+    link.addEventListener("mouseleave", () => {
+      cursor.classList.remove("grow");
+      link.classList.remove("hovered");
+    });
   });
-  link.addEventListener("mouseleave", () => {
-    cursor.classList.remove("grow");
-    link.classList.remove("hovered");
-  });
-});
 
-aList.forEach((a) => {
-  a.addEventListener("mouseover", () => {
-    cursor.classList.add("grow");
+  aList.forEach((a) => {
+    a.addEventListener("mouseover", () => {
+      cursor.classList.add("grow");
+    });
+    a.addEventListener("mouseleave", () => {
+      cursor.classList.remove("grow");
+    });
   });
-  a.addEventListener("mouseleave", () => {
-    cursor.classList.remove("grow");
-  });
-});
 
-buttonList.forEach((button) => {
-  button.addEventListener("mouseover", () => {
-    cursor.classList.add("grow");
+  buttonList.forEach((button) => {
+    button.addEventListener("mouseover", () => {
+      cursor.classList.add("grow");
+    });
+    button.addEventListener("mouseleave", () => {
+      cursor.classList.remove("grow");
+    });
   });
-  button.addEventListener("mouseleave", () => {
-    cursor.classList.remove("grow");
-  });
-});
+}
 
 panels.forEach((panel) => {
   panel.addEventListener("mouseover", () => {
@@ -95,4 +104,11 @@ window.addEventListener("click", () => {
 document.querySelector(".nav-btn").addEventListener("click", () => {
   document.querySelector(".navbar .container").classList.toggle("open");
   document.querySelector(".nav-btn").classList.toggle("clicked");
+});
+
+navLinks.forEach((element) => {
+  element.addEventListener("click", () => {
+    document.querySelector(".navbar .container").classList = "container";
+    document.querySelector(".nav-btn").classList = "nav-btn";
+  });
 });

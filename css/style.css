@@ -37,6 +37,16 @@ body.stop {
   border: 3px solid var(--second-color);
 }
 
+::-moz-selection {
+  color: var(--main-color);
+  background-color: var(--fourth-color);
+}
+
+::selection {
+  color: var(--main-color);
+  background-color: var(--fourth-color);
+}
+
 button {
   cursor: none !important;
 }
@@ -332,7 +342,7 @@ svg {
 .navbar {
   padding: 10px;
   height: 60px;
-  z-index: 5 !important;
+  z-index: 6 !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -347,7 +357,7 @@ svg {
 
 .navbar .navbar-brand {
   position: relative;
-  z-index: 5 !important;
+  z-index: 6 !important;
 }
 
 .navbar .navbar-brand img {
@@ -357,7 +367,7 @@ svg {
 .navbar .nav-link, .navbar .nav-item.active > .nav-link {
   color: var(--third-color) !important;
   position: relative;
-  z-index: 5 !important;
+  z-index: 6 !important;
   -webkit-transition: .5s;
   transition: .5s;
   text-align: center;
@@ -420,7 +430,7 @@ svg {
 
 .navbar .nav-btn {
   position: relative;
-  z-index: 5;
+  z-index: 6;
   display: none !important;
   width: 50px;
   height: 100%;
@@ -439,6 +449,7 @@ svg {
           flex-direction: column;
   border: none;
   background-color: transparent;
+  outline: none;
 }
 
 .navbar .nav-btn.clicked span:nth-of-type(1) {
@@ -492,6 +503,9 @@ svg {
     display: block !important;
     -webkit-transform: translatex(0);
             transform: translatex(0);
+    padding: 10px 0;
+    position: relative;
+    z-index: 6;
   }
   .navbar .navbar-mob {
     display: -webkit-box;
@@ -505,11 +519,22 @@ svg {
             align-items: center;
     width: 100%;
     padding: 0 5px;
+    height: 60px;
   }
   .navbar .nav-btn {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #wrapper .text {
+    width: 300px;
+    height: 300px;
+  }
+  #wrapper .text h2 {
+    font-size: 2rem;
   }
 }
 
@@ -545,36 +570,6 @@ svg {
   -webkit-animation: rotate-content 10s ease-in infinite;
           animation: rotate-content 10s ease-in infinite;
   margin-left: 1090px;
-}
-
-@-webkit-keyframes fall {
-  0% {
-    top: -20%;
-  }
-  20% {
-    top: 0%;
-  }
-  80% {
-    top: 85%;
-  }
-  100% {
-    top: 100%;
-  }
-}
-
-@keyframes fall {
-  0% {
-    top: -20%;
-  }
-  20% {
-    top: 0%;
-  }
-  80% {
-    top: 85%;
-  }
-  100% {
-    top: 100%;
-  }
 }
 
 @-webkit-keyframes rotate-layer {
@@ -665,6 +660,10 @@ svg {
   margin-bottom: 25px;
   font-weight: bolder;
   font-size: 3rem;
+}
+
+#about p {
+  font-size: 18px;
 }
 
 #about .icons {
@@ -882,6 +881,7 @@ svg {
   transition: .5s;
   font-weight: bold;
   margin-top: 5px;
+  color: var(--fifth-color);
 }
 
 #skills .skill .line {
@@ -985,6 +985,15 @@ svg {
   100% {
     -webkit-clip-path: circle(27% at 0% 100%);
             clip-path: circle(27% at 0% 100%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about .icons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -1142,6 +1151,8 @@ svg {
 
 .panel .desc {
   width: 100%;
+  padding: 0 10px;
+  text-align: center;
 }
 
 .panel .info {
@@ -1151,6 +1162,7 @@ svg {
 .panel .info a {
   display: block;
   width: 200px;
+  font-weight: 600;
   background-color: var(--third-color);
   margin: 20px 5px;
   padding: 10px 10px;
@@ -1161,6 +1173,10 @@ svg {
   font-size: 18px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.panel .info a i {
+  margin-left: 10px;
 }
 
 .panel .info a:hover {
@@ -1202,6 +1218,15 @@ svg {
   -webkit-transition: 1s all;
   transition: 1s all;
   opacity: 1;
+}
+
+@media screen and (max-width: 992px) {
+  #work .panel.open:hover {
+    font-size: 1em;
+  }
+  #work .panel a {
+    margin: 10px auto;
+  }
 }
 
 #services {
@@ -1272,6 +1297,7 @@ svg {
   border-radius: 10px;
   -webkit-box-shadow: -6px -6px 20px var(---white-color), 6px 6px 20px var(--shadow-color);
           box-shadow: -6px -6px 20px var(---white-color), 6px 6px 20px var(--shadow-color);
+  z-index: 4;
 }
 
 #services .service .image i {
@@ -1319,6 +1345,13 @@ svg {
 
 #services .service:hover .image::before {
   content: "";
+}
+
+@media screen and (max-width: 576px) {
+  #services .service:hover .image {
+    width: 30%;
+    height: 30%;
+  }
 }
 
 #contact {
@@ -1618,6 +1651,22 @@ svg {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #contact {
+    height: 100% !important;
+    overflow: auto;
+  }
+  #contact .info-card {
+    width: 80%;
+    margin: auto;
+    left: 10%;
+  }
+  #contact .message-card {
+    height: 700px;
+    margin-top: 345px;
+  }
+}
+
 footer {
   height: 50px;
   padding: 20px 0;
@@ -1644,6 +1693,7 @@ footer .end {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 footer p {
@@ -1661,6 +1711,12 @@ footer span {
   font-size: 18px;
   color: var(--third-color);
   font-weight: bold;
+}
+
+@media screen and (max-width: 576px) {
+  footer span {
+    display: block;
+  }
 }
 
 @keyframes beat {
@@ -1737,6 +1793,12 @@ footer span {
   background-color: #de8000;
   color: var(--second-color);
   text-decoration: none;
+}
+
+@media screen and (max-width: 576px) {
+  .hire-me, .go-top {
+    bottom: 60px;
+  }
 }
 
 @-webkit-keyframes wipe {
