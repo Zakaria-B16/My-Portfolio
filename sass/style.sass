@@ -484,6 +484,13 @@ svg
 
     p 
         font-size: 18px
+        margin: 20px auto
+        text-align: justify
+
+        span 
+            background-color: var(--third-color)
+            padding: 0 10px 
+            border-radius: 10px
 
     .icons
         display: flex
@@ -871,6 +878,15 @@ svg
 
             a 
                 margin: 10px auto
+
+@media screen and ( max-width: 768px )
+    #work
+
+        .panels
+            flex-direction: column
+
+            .panel.open:hover
+                height: 50vh
 
 // Start Services Section
 #services

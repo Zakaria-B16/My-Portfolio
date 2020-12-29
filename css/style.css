@@ -694,6 +694,14 @@ svg {
 
 #about p {
   font-size: 18px;
+  margin: 20px auto;
+  text-align: justify;
+}
+
+#about p span {
+  background-color: var(--third-color);
+  padding: 0 10px;
+  border-radius: 10px;
 }
 
 #about .icons {
@@ -1256,6 +1264,18 @@ svg {
   }
   #work .panel a {
     margin: 10px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #work .panels {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #work .panels .panel.open:hover {
+    height: 50vh;
   }
 }
 
