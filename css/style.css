@@ -1274,6 +1274,9 @@ svg {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  #work .panels .panel {
+    height: 30vh;
+  }
   #work .panels .panel.open:hover {
     height: 50vh;
   }
