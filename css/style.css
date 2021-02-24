@@ -295,7 +295,7 @@ svg {
   position: absolute;
   background-color: var(--main-color);
   width: 110%;
-  height: 60px;
+  height: 70px;
   left: 0;
   border: solid 1px var(--main-color) !important;
   z-index: -1;
@@ -341,7 +341,7 @@ svg {
 
 .navbar {
   padding: 10px;
-  height: 60px;
+  height: 70px;
   z-index: 6 !important;
   position: fixed;
   top: 0;
@@ -490,7 +490,7 @@ svg {
   .navbar .container {
     -webkit-transition: .6s;
     transition: .6s;
-    margin: auto !important;
+    margin: 5px auto !important;
   }
   .navbar .container.open {
     display: block !important;
@@ -1259,7 +1259,7 @@ svg {
 }
 
 @media screen and (max-width: 992px) {
-  #work .panel.open:hover {
+  #work .panel.open:hover h4 {
     font-size: 1em;
   }
   #work .panel a {
@@ -1447,15 +1447,16 @@ svg {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   height: 400px;
   border-radius: 20px;
+  padding: 0 20px;
   z-index: 2;
   color: var(--second-color);
   background-color: var(--main-color);
@@ -1467,8 +1468,8 @@ svg {
 
 #contact .info-card h3 {
   margin: 10px;
-  text-align: center;
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: 24px;
 }
 
 #contact .info-card h3 img {
@@ -1482,13 +1483,15 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+  padding: 0 30px;
 }
 
 #contact .info-card .info span {
@@ -1518,6 +1521,16 @@ svg {
 #contact .info-card .info .social {
   margin-top: 10px;
   font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
 #contact .info-card .info .social a {

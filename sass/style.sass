@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900&display=swap')
 
 // Set Html
-html 
+html
     scroll-behavior: smooth
 
 *
     margin: 0
     cursor: none
 
-body 
+body
     font-family: 'Nunito', sans-serif
     overflow-x: hidden
     --black-color: rgba(0, 0, 0, 1)
@@ -17,7 +17,7 @@ body
     --main-color: #0f0f0f
     --second-color: #f0f0f0
     --third-color: #ff9f1c
-    --fourth-color: #2ec4b6 
+    --fourth-color: #2ec4b6
     --fifth-color: #817f7f
     background-color: var(--main-color)
 
@@ -33,18 +33,18 @@ body
     background-color: var(--third-color) !important
     border: 3px solid var(--second-color)
 
-::-moz-selection 
+::-moz-selection
     color: var(--main-color)
     background-color: var(--fourth-color)
 
-::selection 
+::selection
     color: var(--main-color)
     background-color: var(--fourth-color)
-    
-button 
+
+button
     cursor: none !important
 
-    p 
+    p
         margin: 0
         position: relative
         z-index: 3
@@ -76,7 +76,7 @@ svg
         transform: translate(-50%,-50%)
         opacity: 1
 
-    &.grow 
+    &.grow
         transform: scale(1.5)
 
 @keyframes animate
@@ -90,14 +90,14 @@ svg
         opacity: 0
 
 // Start Landing Section
-#wrapper 
+#wrapper
     position: relative
     height: 100vh
     width: 100%
     overflow: hidden
 
     .layer
-        position: absolute 
+        position: absolute
         height: 100%
         width: 100%
         overflow: hidden
@@ -157,7 +157,7 @@ svg
         &:nth-of-type(1)
             left: 30%
             animation-delay: 1s
-        
+
         &:nth-of-type(2)
             left: 60%
             animation-delay: 2s
@@ -218,8 +218,8 @@ svg
         position: absolute
         background-color: var(--main-color)
         width: 110%
-        height: 60px
-       
+        height: 70px
+
         left: 0
         border: solid 1px var(--main-color) !important
         z-index: -1
@@ -228,8 +228,8 @@ svg
         &:nth-last-of-type(2)
             top: auto
             bottom: -1px
-            
-    .text 
+
+    .text
         background-color: var(--main-color)
         text-align: center
         width: 450px
@@ -245,15 +245,15 @@ svg
         flex-wrap: wrap
         transform: translate(-50%,-50%)
 
-        h2 
+        h2
             z-index: 7
             color: var(--second-color)
             font-size: 3rem
             font-weight: bold
 
-.navbar 
+.navbar
     padding: 10px
-    height: 60px
+    height: 70px
     z-index: 6 !important
     position: fixed
     top: 0
@@ -264,23 +264,22 @@ svg
     .nav-item
         display: inline-block !important
 
-
     .navbar-brand
         position: relative
         z-index: 6 !important
-             
+
         img
-            width: 50px     
-        
+            width: 50px
+
     .nav-link , .nav-item.active > .nav-link
         color: var(--third-color) !important
         position: relative
         z-index: 6 !important
         transition: .5s
         text-align: center
-        
+
     .nav-link
-        margin: 0 10px 
+        margin: 0 10px
         min-width: 100px
         text-align: center
         text-transform: uppercase
@@ -289,21 +288,21 @@ svg
         align-items: center
         flex-direction: column
 
-        .line 
+        .line
             transition: .5s
             height: 5px
             width: 0%
             background-color: var(--black-color)
             border-radius: 2px
-            
+
         &:hover
             color: #000000 !important
             z-index: 1000
             font-weight: bolder
 
             .line
-                 width: 100%
-                
+                width: 100%
+
     .nav-item.active > .nav-link
         background-color: var(--third-color) !important
         color: var(--second-color) !important
@@ -312,7 +311,7 @@ svg
 
         .line
             display: none
-            
+
         &:hover
             font-weight: normal
 
@@ -329,9 +328,9 @@ svg
         border: none
         background-color: transparent
         outline: none
-        
-        &.clicked 
-            
+
+        &.clicked
+
             span:nth-of-type(1)
                 transform: rotate(45deg) translate(10px, 10px)
 
@@ -360,13 +359,13 @@ svg
 
         .container
             transition: .6s
-            margin: auto !important
+            margin: 5px auto !important
 
             &.open
                 display: block !important
                 background-color: var(--second-color) !important
                 border-radius: 10px
-                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
 
                 .navbar-container
                     display: block !important
@@ -374,7 +373,6 @@ svg
                     padding: 10px 0
                     position: relative
                     z-index: 6
-    
 
         .navbar-mob
             display: flex
@@ -395,7 +393,7 @@ svg
             height: 300px
 
             h2
-               font-size: 2rem
+                font-size: 2rem
 
 .handle
     z-index: 3
@@ -405,9 +403,9 @@ svg
     display: block
     background-color: transparent
     top: 0
-    left: 50%    
+    left: 50%
 
-.skewed 
+.skewed
 
     .handle
         height: 200%
@@ -415,11 +413,11 @@ svg
         transform: rotate(30deg) translateY(-50%)
         transform-origin: top
 
-    .top 
+    .top
         margin-left: -1090px
         width: calc( 50vw + 1090px )
-        border-radius: 0% 100% 100% 0% / 0% 0% 100% 100%  
-        animation: rotate-layer 10s ease-in infinite 
+        border-radius: 0% 100% 100% 0% / 0% 0% 100% 100%
+        animation: rotate-layer 10s ease-in infinite
 
         .content-wrap
             animation: rotate-content 10s ease-in infinite
@@ -427,19 +425,19 @@ svg
 
 @keyframes fall
     0%
-            top: -20%
+        top: -20%
 
-    20% 
-            top: 0%
+    20%
+        top: 0%
 
     80%
-            top: 85%
+        top: 85%
 
     100%
-            top: 100%
+        top: 100%
 
 @keyframes rotate-layer
-    0% 
+    0%
         transform: skew(-30deg)
     50%
         transform: skew(-40deg)
@@ -447,22 +445,21 @@ svg
         transform: skew(-30deg)
 
 @keyframes rotate-content
-    0% 
+    0%
         transform: skew(30deg)
     50%
         transform: skew(40deg)
     100%
         transform: skew(30deg)
-        
 
 // Start About Us Section
-#about 
+#about
     position: relative
     padding: 50px 0
     overflow: hidden
     width: 100%
     color: var(--second-color)
-    padding-bottom: 110px 
+    padding-bottom: 110px
 
     &::before
         content: ""
@@ -472,24 +469,24 @@ svg
         width: 200%
         height: 100%
         background-color: var(--main-color)
-        border-radius: 0 0 50% 50% / 0% 0% 100% 100% 
+        border-radius: 0 0 50% 50% / 0% 0% 100% 100%
         transform: scale(1.2)
 
-    h1 
+    h1
         margin: 0
         color: var(--third-color)
         margin-bottom: 25px
         font-weight: bolder
         font-size: 3rem
 
-    p 
+    p
         font-size: 18px
         margin: 20px auto
         text-align: justify
 
-        span 
+        span
             background-color: var(--third-color)
-            padding: 0 10px 
+            padding: 0 10px
             border-radius: 10px
 
     .icons
@@ -498,7 +495,7 @@ svg
         justify-content: center
         flex-direction: column
 
-        a 
+        a
             position: relative
             z-index: 4
             color: var(--main-color)
@@ -507,8 +504,8 @@ svg
             height: 60px
             width: 60px
             border-radius: 50%
-            
-            i 
+
+            i
                 position: absolute
                 top: 50%
                 left: 50%
@@ -572,44 +569,43 @@ svg
 
                 .blured
                     animation: rotate 2s ease-in infinite
-                    
+
                     &::before
-                       width: 40px
-                       height: 40px
-                       top: 50% 
-                       left: 50%
+                        width: 40px
+                        height: 40px
+                        top: 50%
+                        left: 50%
 
                     &::after
-                       width: 15px
-                       height: 15px
-                       top: 0px 
-                       left: 45px
+                        width: 15px
+                        height: 15px
+                        top: 0px
+                        left: 45px
 
                     span:nth-of-type(1)
-                       width: 30px
-                       height: 30px
-                       top: -15px 
-                       left: -15px
+                        width: 30px
+                        height: 30px
+                        top: -15px
+                        left: -15px
 
                     span:nth-of-type(2)
-                       width: -25px
-                       height: -25px
-                       top: 20px 
-                       left: 30px
+                        width: -25px
+                        height: -25px
+                        top: 20px
+                        left: 30px
 
 @keyframes rotate
     0%, 100%
         transform: scale(1)
     50%
         transform: scale(.9)
-    
 
 // Start Skills Section
 #skills
     padding: 50px 0
     background-color: var(--second-color)
 
-    h1 
+    h1
         margin-top: 0
         color: var(--third-color)
         font-weight: bolder
@@ -633,14 +629,14 @@ svg
         flex-direction: column
         box-shadow: inset -6px -6px 20px var(--shadow-color), inset 6px 6px 20px var(--white-color)
 
-        img 
+        img
             position: relative
             z-index: 2
             width: 100px
             transition: .5s
             filter: grayscale(100%)
 
-        h3 
+        h3
             z-index: 2
             transition: .5s
             font-weight: bold
@@ -654,9 +650,9 @@ svg
             background-color: var(--main-color)
             border-radius: 5px
             transition: .5s
-            margin-bottom: 10px 
+            margin-bottom: 10px
 
-        p 
+        p
             z-index: 2
             color: var(--fifth-color)
             max-width: 300px
@@ -665,20 +661,19 @@ svg
             content: ""
             position: absolute
             right: 0
-            bottom: 0 
+            bottom: 0
             width: 100%
             height: 100%
             clip-path: circle(27% at 0% 100%)
             transition: 1s
             background-color: var(--main-color)
             box-shadow: inset -6px -6px 20px var(--shadow-color), inset 6px 6px 20px var(--white-color)
-            
 
         &::before
             content: ""
             position: absolute
             left: 0
-            top: 0 
+            top: 0
             width: 100%
             height: 100%
             clip-path: circle(30% at 80% 20%)
@@ -686,12 +681,12 @@ svg
             background-color: var(--third-color)
             box-shadow: inset -6px -6px 20px var(--shadow-color), inset 6px 6px 20px var(--white-color)
 
-        &:hover 
+        &:hover
             transform: scale(1.1)
             z-index: 2
             box-shadow: 6px 6px 20px var(--shadow-color), -6px -6px 20px var(--white-color)
 
-            img     
+            img
                 filter: grayscale(0%)
                 transform: scale(1.1)
 
@@ -720,7 +715,6 @@ svg
         .icons
             flex-direction: row
 
-
 // Start Work Section
 #work
     width: 100%
@@ -733,7 +727,7 @@ svg
     align-items: center
     flex-direction: column
 
-    h1 
+    h1
         margin-top: 0
         color: var(--main-color)
         font-weight: bolder
@@ -745,7 +739,7 @@ svg
         overflow: hidden
         display: flex
         flex-wrap: wrap
-        
+
 .panel
     background: var(--main-color)
     box-shadow: inset 0 0 5px 10px rgba(0, 0, 0, 0.3)
@@ -761,22 +755,22 @@ svg
     display: flex
     flex-direction: column
     filter: grayscale(100%)
- 
+
 .panel1
     background-image: url(../img/1.png)
- 
+
 .panel2
     background-image: url(../img/2.png)
- 
+
 .panel3
     background-image: url(../img/5.png)
- 
+
 .panel4
     background-image: url(../img/4.png)
- 
+
 .panel5
     background-image: url(../img/3.png)
-  
+
 .panel
     > *
         margin: 0
@@ -786,13 +780,13 @@ svg
         display: flex
         justify-content: center
         align-items: center
- 
+
         &:first-child
             transform: translateY(100%)
 
         &:last-child
             transform: translateY(100%)
- 
+
     &.open-active
         > *:first-child, > *:last-child
             transform: translateY(0)
@@ -803,7 +797,7 @@ svg
         z-index: 2
         display: flex
         flex-direction: column
- 
+
     h4
         position: relative
         z-index: 2
@@ -813,7 +807,7 @@ svg
         font-size: 2em
         font-weight: bold
 
-    .desc 
+    .desc
         width: 100%
         padding: 0 10px
         text-align: center
@@ -821,7 +815,7 @@ svg
     .info
         width: 100%
 
-        a 
+        a
             display: block
             width: 200px
             font-weight: 600
@@ -830,7 +824,7 @@ svg
             padding: 10px 10px
             border-radius: 50px
             color: var(--main-color)
-            transition: .5s 
+            transition: .5s
             font-size: 18px
             box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
 
@@ -841,11 +835,11 @@ svg
                 background-color: darken(#ff9f1c, 12)
                 color: var(--second-color)
                 text-decoration: none
- 
+
     &.open
         transition: .5s
 
-        &:hover    
+        &:hover
             flex: 5
             filter: grayscale(0%)
 
@@ -870,13 +864,13 @@ svg
     #work
 
         .panel
-            
+
             &.open:hover
 
                 h4
-                font-size: 1em
+                    font-size: 1em
 
-            a 
+            a
                 margin: 10px auto
 
 @media screen and ( max-width: 768px )
@@ -889,20 +883,20 @@ svg
                 height: 30vh
 
                 &.open:hover
-                   height: 50vh
+                    height: 50vh
 
 // Start Services Section
 #services
     padding: 50px 0
     background-color: var(--second-color)
 
-    h1 
+    h1
         margin-top: 0
         color: var(--third-color)
         font-weight: bolder
         font-size: 3rem
 
-    .service 
+    .service
         text-align: center
         position: relative
         height: 80%
@@ -915,10 +909,10 @@ svg
         align-items: center
         box-shadow: 6px 6px 20px var(--shadow-color), -6px -6px 20px var(--white-color)
 
-        p 
+        p
             min-height: 100%
 
-        h4 
+        h4
             margin: 10px auto
             font-weight: bolder
             color: var(--third-color)
@@ -938,7 +932,7 @@ svg
             border-radius: 10px
             box-shadow: -6px -6px 20px var(---white-color), 6px 6px 20px var(--shadow-color)
             z-index: 4
-            
+
             i
                 position: relative
                 z-index: 6
@@ -962,14 +956,14 @@ svg
                 align-items: center
 
         &:hover
-        
+
             .image
                 width: 35%
                 height: 35%
                 transform: translate(-50%,-40%)
                 background-color: var(--third-color)
 
-                i 
+                i
                     font-size: 3rem
                     color: var(--main-color)
 
@@ -984,7 +978,6 @@ svg
             .image
                 width: 30%
                 height: 30%
-
 
 // Contact Section
 #contact
@@ -1003,7 +996,7 @@ svg
         height: 100%
         background-color: var(--third-color)
 
-    h1 
+    h1
         margin-top: 0
         position: relative
         color: var(--second-color)
@@ -1011,7 +1004,7 @@ svg
         font-size: 3rem
         z-index: 1
 
-    .row 
+    .row
         position: relative
 
     .info-card
@@ -1019,20 +1012,21 @@ svg
         width: 95%
         display: flex
         justify-content: space-evenly
-        align-items: center
+        align-items: flex-start
         flex-direction: column
         height: 400px
         border-radius: 20px
+        padding: 0 20px
         z-index: 2
         color: var(--second-color)
         background-color: var(--main-color)
         transform: translateY(7.5%)
         box-shadow: 0 20px 20px rgba(0, 0, 0, .3)
 
-        h3 
+        h3
             margin: 10px
-            text-align: center
-            font-weight: bold
+            font-weight: bolder
+            font-size: 24px
 
             img
                 width: 40px
@@ -1040,29 +1034,35 @@ svg
         .info
             display: flex
             justify-content: center
-            align-items: center
+            align-items: flex-start
             flex-direction: column
+            width: 100%
+            padding: 0 30px
 
             span
                 position: relative
                 z-index: 4
-                display: flex 
+                display: flex
                 justify-content: space-between
                 align-items: center
                 margin-bottom: 30px
 
-                i 
+                i
                     margin: 0 5px
                     float: left
 
-                p 
+                p
                     margin: 0
 
             .social
                 margin-top: 10px
                 font-size: 1.5rem
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 100%
 
-                a 
+                a
                     color: var(--second-color) !important
                     margin: 7px
                     position: relative !important
@@ -1071,7 +1071,7 @@ svg
     .message-card
         height: 100%
         background-color: var(--second-color)
-        overflow: hidden 
+        overflow: hidden
         display: flex
         justify-content: space-evenly
         align-items: center
@@ -1080,7 +1080,7 @@ svg
         border-radius: 20px
         box-shadow: 0 20px 20px rgba(0, 0, 0, .3)
 
-        h3 
+        h3
             text-align: center
             font-weight: bold
             color: var(--main-color)
@@ -1107,10 +1107,10 @@ svg
                     padding: 5px 0
                     background-color: var(--second-color)
                     outline: none
-                    border-bottom: 3px solid var(--main-color)  
-                    opacity: .5   
+                    border-bottom: 3px solid var(--main-color)
+                    opacity: .5
 
-                span 
+                span
                     position: absolute
                     left: 0
                     top: 0
@@ -1128,7 +1128,7 @@ svg
                     color: var(--third-color)
                     opacity: 1
 
-            .textarea 
+            .textarea
                 width: 90%
 
                 textarea
@@ -1168,19 +1168,19 @@ svg
             color: white
             animation: status 4s ease forwards
 
-@keyframes status 
-  0% 
-    opacity: 1
-    pointer-events: all
-  
-  90% 
-    opacity: 1
-    pointer-events: all
-  
-  100% 
-    opacity: 0
-    pointer-events: none
-    display: none !important
+@keyframes status
+    0%
+        opacity: 1
+        pointer-events: all
+
+    90%
+        opacity: 1
+        pointer-events: all
+
+    100%
+        opacity: 0
+        pointer-events: none
+        display: none !important
 
 @media screen and ( max-width: 992px )
     #contact
@@ -1202,9 +1202,9 @@ svg
         .message-card
             height: 700px
             margin-top: 345px
-  
+
 // Start Footer Section
-footer 
+footer
     height: 50px
     padding: 20px 0
     display: flex
@@ -1219,26 +1219,24 @@ footer
         align-items: center
         text-align: center
 
-    p 
+    p
         margin: 0
 
-    i 
+    i
         padding: 0 2px
         color: var(--third-color)
         animation: beat 2s infinite
 
-    span 
+    span
         font-size: 18px
         color: var(--third-color)
         font-weight: bold
 
 @media screen and ( max-width: 576px )
-  footer
+    footer
 
-    span 
-        display: block
-
-     
+        span
+            display: block
 
 @keyframes beat
     0%, 100%
@@ -1247,7 +1245,7 @@ footer
         transform: scale(1.3)
 
 // Start Go Top Button
-.go-top 
+.go-top
     position: fixed
     bottom: 30px
     right: 25px
@@ -1258,7 +1256,7 @@ footer
     justify-content: center
     align-items: center
     border-radius: 50%
-    color: var(--main-color) 
+    color: var(--main-color)
     z-index: 100
     transition: .5s
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
@@ -1267,9 +1265,9 @@ footer
         background-color: darken(#ff9f1c, 12)
         color: var(--second-color)
         text-decoration: none
-        
+
 // Start HIre Me Button
-.hire-me 
+.hire-me
     position: fixed
     bottom: 30px
     left: 25px
@@ -1280,12 +1278,12 @@ footer
     justify-content: center
     align-items: center
     border-radius: 25px
-    color: var(--main-color) 
+    color: var(--main-color)
     z-index: 100
     font-weight: bold
     transition: .5s
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
-    animation: wipe 4s ease-in-out infinite 
+    animation: wipe 4s ease-in-out infinite
 
     &:hover
         background-color: darken(#ff9f1c, 12)
@@ -1325,14 +1323,13 @@ footer
     left: 0
     width: 100vw
     height: 100vh
-    z-index: 1000  
+    z-index: 1000
     background-color: var(--second-color)
     display: flex
     justify-content: center
     align-items: center
     overflow-y: hidden !important
     filter: blur(10px) contrast(15)
-    
 
     &.remove
         animation: vanish .5s forwards
@@ -1340,7 +1337,7 @@ footer
     .part
         width: 100px
         height: 100px
-        background-color: var(--main-color) 
+        background-color: var(--main-color)
         border-radius: 50px
 
         &:first-child, &:last-child
@@ -1356,7 +1353,6 @@ footer
         &.right-spin
             animation: right 2s linear infinite
 
-
 @keyframes pulse
     0%,100%
         transform: scale(1)
@@ -1367,24 +1363,23 @@ footer
 
 @keyframes left
     from
-       transform: rotate(0deg) translateX(50px) 
+        transform: rotate(0deg) translateX(50px)
     to
-        transform: rotate(360deg) translateX(50px) 
+        transform: rotate(360deg) translateX(50px)
 
 @keyframes right
     from
-       transform: rotate(360deg) translateX(50px) 
+        transform: rotate(360deg) translateX(50px)
     to
-        transform: rotate(0deg) translateX(50px) 
-            
+        transform: rotate(0deg) translateX(50px)
+
 @keyframes rot
     from
-       transform: rotate(360deg) 
+        transform: rotate(360deg)
     to
-        transform: rotate(0deg) 
+        transform: rotate(0deg)
 
 @keyframes vanish
     100%
         opacity: 0
         visibility: hidden
-            
